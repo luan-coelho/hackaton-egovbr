@@ -17,7 +17,7 @@ public class Resposta extends EntityClass {
     @ManyToOne
     private Pergunta pergunta;
 
-    @ManyToMany
+    @ManyToOne
     private Alternativa alternativa;
 
 }
