@@ -3,6 +3,7 @@ package br.unitins.hackaton.egovbr.model;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -14,10 +15,13 @@ import java.util.List;
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Avaliacao {
+public class Avaliacao extends EntityClass {
     @ManyToOne
+    @JoinColumn(name = "setor_avaliacao")
     private Setor setor;
+
     @OneToMany
+    @JoinColumn(name = "perguntas_avaliacao")
     private List<Pergunta> perguntas;
 
     private String titulo;
