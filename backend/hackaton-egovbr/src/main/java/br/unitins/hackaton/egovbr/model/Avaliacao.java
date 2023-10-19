@@ -26,6 +26,12 @@ public class Avaliacao {
 
     private Boolean concluida;
 
+    private Boolean emProcesso;
+
     private String sugestaoResultado;
+
+    private String planoAcaoSetor;
+
+    private String benfeitoriaReaizada;
 
 }
