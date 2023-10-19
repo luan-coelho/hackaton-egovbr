@@ -26,4 +26,6 @@ public class Avaliacao {
 
     private Boolean concluida;
 
+    private String sugestaoResultado;
+
 }
