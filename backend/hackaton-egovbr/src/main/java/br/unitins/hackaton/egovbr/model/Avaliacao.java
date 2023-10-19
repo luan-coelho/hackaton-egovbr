@@ -20,4 +20,10 @@ public class Avaliacao {
     @OneToMany
     private List<Pergunta> perguntas;
 
+    private String titulo;
+
+    private String descricao;
+
+    private Boolean concluida;
+
 }
