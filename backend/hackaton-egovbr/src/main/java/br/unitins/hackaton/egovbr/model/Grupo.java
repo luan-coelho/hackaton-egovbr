@@ -1,5 +1,6 @@
 package br.unitins.hackaton.egovbr.model;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
@@ -20,7 +21,7 @@ public class Grupo extends EntityClass {
     @Size(min = 3, max = 30)
     private String nome;
 
-    @JoinColumn(name = "lista_setor_grupo")
+    @ElementCollection
     @OneToMany
     private List<Setor> setores;
 

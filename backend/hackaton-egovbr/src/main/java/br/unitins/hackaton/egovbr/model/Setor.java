@@ -24,8 +24,8 @@ public class Setor extends EntityClass {
     @Size(min = 3, max = 30)
     private String nome;
 
-    @JoinColumn(name = "lista_usuario_setor")
-    @OneToMany
+   
+    @OneToMany(mappedBy = "setor")
     private List<Usuario> usuarios;
 
 }

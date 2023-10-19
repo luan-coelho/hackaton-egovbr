@@ -23,6 +23,7 @@ public class RespostaAvaliacao extends EntityClass {
     private Avaliacao avaliacao;
 
     @OneToMany
+    
     private List<Resposta> respostas;
 
 }
