@@ -16,7 +16,8 @@ public class Postagem extends EntityClass {
     @ManyToOne
     private Avaliacao avaliacao;
 
-    @ManyToOne
-    private Setor setor;
+    private String descricaoPostagem;
+
+    private String tituloPostagem;
 
 }
