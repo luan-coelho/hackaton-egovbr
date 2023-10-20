@@ -23,8 +23,8 @@ public class Avaliacao extends EntityClass{
     private Setor setor;
 
     @OneToMany
-    @JoinColumn(name = "perguntas_avaliacao")
-    private List<Pergunta> perguntas;
+    @JoinColumn(name = "temapergunta_avaliacao")
+    private List<TemaPergunta> temasPergunta;
 
     private String titulo;
 

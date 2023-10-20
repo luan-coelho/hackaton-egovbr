@@ -17,10 +17,9 @@ public class UsuarioController {
     @Inject
     UsuarioService usuarioService;
 
-
     @POST
     @Path("/cadastrar")
-    public Response insert(UsuarioDTO dto){
+    public Response insert(UsuarioDTO dto) {
 
         Usuario user = usuarioService.create(dto);
         return Response.ok(user).status(Response.Status.CREATED).build();
@@ -28,11 +27,10 @@ public class UsuarioController {
 
     @GET
     @Path("/{id}")
-    public Response getById(@PathParam("id") Long id){
+    public Response getById(@PathParam("id") Long id) {
         Usuario u = usuarioService.findById(id);
         return Response.ok(u).status(Response.Status.FOUND).build();
 
     }
-
 
 }

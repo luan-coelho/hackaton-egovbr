@@ -18,8 +18,5 @@ public class SetorService extends BaseService<Setor, Long, SetorRepository> {
         return nSetor;
     }
 
-    public Setor addUser(Long id , UsuarioDTO dto){
-
-        Setor = *-*
-    }
+    //
 }
