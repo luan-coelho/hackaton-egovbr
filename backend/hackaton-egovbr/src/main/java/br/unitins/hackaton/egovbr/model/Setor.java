@@ -24,8 +24,7 @@ public class Setor extends EntityClass {
     @Size(min = 3, max = 30)
     private String nome;
 
-   
-    @OneToMany()
+    @OneToMany
     private List<Usuario> usuarios;
 
 }

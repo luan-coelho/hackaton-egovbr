@@ -29,5 +29,7 @@ public class Usuario extends EntityClass {
     @Enumerated(EnumType.STRING)
     private Perfil perfil;
 
+    
+
 
 }
