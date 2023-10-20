@@ -25,7 +25,7 @@ Contato
 
 
 Engenharia de Requisitos
-imagem/plantuml.png
+image/plantuml.png
 
 
 Créditos
