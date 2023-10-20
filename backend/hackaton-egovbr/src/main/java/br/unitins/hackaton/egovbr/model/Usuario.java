@@ -1,7 +1,5 @@
 package br.unitins.hackaton.egovbr.model;
 
-import java.util.Set;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;

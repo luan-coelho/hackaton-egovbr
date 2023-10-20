@@ -1,6 +1,5 @@
 package br.unitins.hackaton.egovbr.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;

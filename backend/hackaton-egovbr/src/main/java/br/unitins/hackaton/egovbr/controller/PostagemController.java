@@ -2,9 +2,9 @@ package br.unitins.hackaton.egovbr.controller;
 
 import java.util.List;
 
-import br.unitins.hackaton.egovbr.model.Avaliacao;
-import br.unitins.hackaton.egovbr.repository.AvaliacaoRepository;
-import br.unitins.hackaton.egovbr.service.AvaliacaoService;
+import br.unitins.hackaton.egovbr.model.Postagem;
+import br.unitins.hackaton.egovbr.repository.PostagemRepository;
+import br.unitins.hackaton.egovbr.service.PostagemService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.DELETE;
@@ -17,37 +17,37 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/avaliacao")
+@Path("/postagem")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-public class AvaliacaoController {
+public class PostagemController {
 
     @Inject
-    AvaliacaoService service;
+    PostagemService service;
 
     @Inject
-    AvaliacaoRepository repository;
+    PostagemRepository repository;
 
     @POST
-    public Response create(Avaliacao a) {
+    public Response create(Postagem a) {
         service.create(a);
         return Response.ok().build();
     }
 
     @GET
-    public List<Avaliacao> getAll() {
+    public List<Postagem> getAll() {
         return service.findAll();
     }
 
     @GET
     @Path("/{id}")
-    public Avaliacao getById(@PathParam("id") Long id) {
+    public Postagem getById(@PathParam("id") Long id) {
         return service.findById(id);
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Avaliacao a) {
+    public Response update(@PathParam("id") Long id, Postagem a) {
         service.update(a);
         return Response.ok().build();
     }
