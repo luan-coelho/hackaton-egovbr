@@ -29,5 +29,9 @@ public class Usuario extends EntityClass {
     @Enumerated(EnumType.STRING)
     private Perfil perfil;
 
+    @ManyToOne
+    @JoinColumn(name = "setor_id")
+    private Setor setor;
+
 
 }
