@@ -25,7 +25,7 @@ public class Setor extends EntityClass {
     private String nome;
 
    
-    @OneToMany(mappedBy = "setor")
+    @OneToMany()
     private List<Usuario> usuarios;
 
 }

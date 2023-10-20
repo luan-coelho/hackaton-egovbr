@@ -21,7 +21,11 @@ public class Grupo extends EntityClass {
     @Size(min = 3, max = 30)
     private String nome;
 
-    @ElementCollection
+
+    private String caminhoIcone;
+
+    @JoinColumn(name = "lista_setor_grupo")
+
     @OneToMany
     private List<Setor> setores;
 

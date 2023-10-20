@@ -13,6 +13,7 @@ public abstract class BaseService<T, ID, R extends BaseRepository<T, ID>> {
     @Inject
     R repository;
 
+
     public List<T> findAll() {
         return repository.listAll();
     }

@@ -26,13 +26,8 @@ public class Usuario extends EntityClass {
     @Size(min = 11, max = 11)
     private String cpf;
 
-    @ElementCollection
-    @CollectionTable(name = "perfil_usuario", joinColumns = @JoinColumn(name = "id_usuario", referencedColumnName = "id"))
-    @Column(name = "perfil", length = 30)
-    private Set<Perfil> perfis;
-
-    @ManyToOne(optional = false)
-    private Setor setor;
+    @Enumerated(EnumType.STRING)
+    private Perfil perfil;
 
 
 }

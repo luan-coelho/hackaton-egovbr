@@ -19,11 +19,11 @@ import java.util.List;
 public class Avaliacao extends EntityClass{
 
     @ManyToOne
-    @JoinColumn(name = "setor_id")
+    @JoinColumn(name = "setor_avaliacao")
     private Setor setor;
 
-    @ElementCollection
     @OneToMany
+    @JoinColumn(name = "perguntas_avaliacao")
     private List<Pergunta> perguntas;
 
     private String titulo;
