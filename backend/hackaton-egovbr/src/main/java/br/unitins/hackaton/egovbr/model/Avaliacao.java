@@ -1,5 +1,6 @@
 package br.unitins.hackaton.egovbr.model;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
@@ -15,7 +16,8 @@ import java.util.List;
 @Getter
 @Setter
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Avaliacao extends EntityClass {
+public class Avaliacao extends EntityClass{
+
     @ManyToOne
     @JoinColumn(name = "setor_avaliacao")
     private Setor setor;

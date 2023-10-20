@@ -17,7 +17,6 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Pergunta extends EntityClass {
 
-    @Column(name = "titulo")
     private String tituto;
 
     @JoinColumn(name = "alternativas_pergunta")

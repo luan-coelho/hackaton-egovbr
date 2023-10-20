@@ -6,7 +6,9 @@ import jakarta.persistence.InheritanceType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -14,14 +16,16 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Setor extends EntityClass {
 
     @Size(min = 3, max = 30)
     private String nome;
 
-    @JoinColumn(name = "lista_usuario_setor")
-    @OneToMany
+   
+    @OneToMany()
     private List<Usuario> usuarios;
 
 }
